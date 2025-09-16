@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tawsilaa</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <img src="/images/image1.jpg" alt="Tawsilaa Logo" class="logo-img"/>
+        <span class="logo-text">Tawsilaa</span>
+      </div>
+      <div class="navbar-actions">
+        <div class="search-container">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search restaurants or food..." />
+          <button type="button" class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <button class="cart-btn" id="cartBtn">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Home Page -->
+    <div id="homePage" class="page active">
+<section>
+  <h2>Categories</h2>
+  <div class="categories">
+    <div class="category" data-type="pizza">
+      <img src="/images/p1.png" alt="Pizza"/>
+      <span>Pizza</span>
+    </div>
+    <div class="category" data-type="coffee">
+      <img src="/images/c1.png" alt="Coffee"/>
+      <span>Coffee</span>
+    </div>
+    <div class="category" data-type="burger">
+      <img src="/images/d1.png" alt="burger"/>
+      <span>Burger</span>
+    </div>
+    <div class="category" data-type="desserts">
+      <img src="/images/des1.png" alt="Desserts"/>
+      <span>Desserts</span>
+    </div>
+       <div class="category" data-type="chicken">
+      <img src="/images/ch1.png" alt="chicken"/>
+      <span>chicken</span>
+    </div>
+  </div>
+</section>
+
+
+      <!-- Featured Restaurants -->
+      <section>
+        <h2>Featured Restaurants</h2>
+        <div class="restaurant-cards-container" id="restaurantContainer">
+          <!-- 1 -->
+          <div class="restaurant-card">
+            <img src="images/atyab.png" alt="Atyab Farouj" class="restaurant-img"/>
+            <h3>Atyab Farouj</h3>
+            <p>⭐⭐⭐⭐ (4.5)</p>
+            <p>Delivery: 25–35 min | $2.99 fee</p>
+          </div>
+          <!-- 2 -->
+          <div class="restaurant-card">
+            <img src="images/tasty.png" alt="Tasty Bees" class="restaurant-img"/>
+            <h3>Tasty Bees</h3>
+            <p>⭐⭐⭐⭐⭐ (4.8)</p>
+            <p>Delivery: 20–30 min | $2.49 fee</p>
+          </div>
+          <!-- 3 -->
+          <div class="restaurant-card">
+            <img src="/images/zaatar.png" alt="Zaatar W Zeit" class="restaurant-img"/>
+            <h3>Zaatar W Zeit</h3>
+            <p>⭐⭐⭐⭐ (4.3)</p>
+            <p>Delivery: 30–40 min | $3.49 fee</p>
+          </div>
+          <!-- 4 -->
+          <div class="restaurant-card">
+            <img src="/images/pizzanini.png" alt="Pizzanini" class="restaurant-img"/>
+            <h3>Pizzanini</h3>
+            <p>⭐⭐⭐⭐⭐ (4.7)</p>
+            <p>Delivery: 25–35 min | $3.19 fee</p>
+          </div>
+          <!-- 5 -->
+          <div class="restaurant-card">
+            <img src="/images/bbq.png" alt="BBQ House" class="restaurant-img"/>
+            <h3>BBQ House</h3>
+            <p>⭐⭐⭐⭐ (4.4)</p>
+            <p>Delivery: 35–45 min | $3.99 fee</p>
+          </div>
+          <!-- 6 -->
+          <div class="restaurant-card">
+            <img src="/images/res6.png" alt="Restaurant 6" class="restaurant-img"/>
+            <h3>Restaurant 6</h3>
+            <p>⭐⭐⭐⭐ (4.0)</p>
+            <p>Delivery: 20–25 min | $2.50 fee</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partner Restaurants Circles -->
+      <section>
+        <h2>Our Partner Restaurants</h2>
+        <div class="partner-circles">
+          <div class="partner">
+            <img src="/images/res1.png" alt="Restaurant 1">
+            <span>Restaurant 1</span>
+          </div>
+          <div class="partner">
+            <img src="/images/res2.png" alt="Restaurant 2">
+            <span>Restaurant 2</span>
+          </div>
+          <div class="partner">
+            <img src="/images/res3.png" alt="Restaurant 3">
+            <span>Restaurant 3</span>
+          </div>
+          <div class="partner">
+            <img src="/images/res4.png" alt="Restaurant 4">
+            <span>Restaurant 4</span>
+          </div>
+          <div class="partner">
+            <img src="/images/res5.png" alt="Restaurant 5">
+            <span>Restaurant 5</span>
+          </div>
+                <div class="partner">
+            <img src="/images/res6.png" alt="Restaurant 5">
+            <span>Restaurant 5</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Menu Page -->
+    <div id="menuPage" class="page">
+      <div class="menu-header">
+        <button class="back-btn" id="backBtn"><i class="fas fa-arrow-left"></i> Back to Home</button>
+        <h2 id="restaurantTitle">Restaurant Menu</h2>
+        <p id="restaurantDescription">Delicious food delivered to your door</p>
+      </div>
+      <div class="menu-items" id="menuContainer"></div>
+    </div>
+
+    <!-- Cart Page -->
+    <div id="cartPage" class="page">
+      <div class="menu-header">
+        <button class="back-btn" id="cartBackBtn"><i class="fas fa-arrow-left"></i> Continue Shopping</button>
+        <h2>Your Cart</h2>
+      </div>
+      <div id="cartContent"></div>
+    </div>
+  </main>
+<!-- Small Footer Image -->
+<div class="moving-scooter">
+  <img src="/images/imageb.png" alt="Scooter">
+</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="/images/image1.jpg" alt="Tawsilaa Logo" class="footer-logo-img"/>
+        <span class="footer-text">Tawsilaa</span>
+      </div>
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">Restaurants</a>
+        <a href="#">Cart</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Tawsilaa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
